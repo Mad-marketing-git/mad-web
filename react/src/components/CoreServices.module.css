@@ -1,0 +1,39 @@
+.coreServices {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #060918; /* Same as body background */
+  color: white;
+}
+
+.coreServices h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #ffcc00; /* Yellow/orange color */
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.serviceCard {
+  background-color: #1a1a2a; /* Slightly lighter dark blue */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.serviceCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ff6600; /* Orange color */
+}
+
+.serviceCard p {
+  font-size: 1rem;
+  line-height: 1.6;
+}

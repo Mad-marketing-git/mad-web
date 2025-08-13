@@ -1,0 +1,56 @@
+.whatWeDo {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #060918; /* Same as body background */
+  color: white;
+}
+
+.whatWeDo h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #ffcc00; /* Yellow/orange color */
+}
+
+.description {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background-color: #1a1a2a; /* Slightly lighter dark blue */
+  padding: 2rem;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cardIcon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #ff6600; /* Orange color */
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

@@ -1,0 +1,30 @@
+# To Do List
+
+## Plan
+1.  **Component Structure:** Break down the website into the following React components, each with its own CSS module for styling:
+    *   `Navbar`
+    *   `Hero`
+    *   `WhatWeDo`
+    *   `WhyPartnerWithUs`
+    *   `CoreServices`
+    *   `KnowledgeBase`
+    *   `Contact`
+    *   `Footer`
+2.  **Styling:** Use CSS modules to style each component, matching the dark theme, colors, and layout from the mockup. Also update the global CSS for base styles.
+3.  **Implementation:** Implement the components sequentially, starting with the navigation bar and hero section, and then move down the page.
+4.  **Assets:** Use the images already present in the `src/assets` directory.
+
+## Log
+- [x] Create new git branch `feature/website-redesign`
+- [x] Remove old components from `src/components`
+- [x] Create new component files
+- [x] Implement Navbar component
+- [x] Implement Hero component
+- [x] Implement WhatWeDo component
+- [x] Implement WhyPartnerWithUs component
+- [x] Implement CoreServices component
+- [x] Implement KnowledgeBase component
+- [x] Implement Contact component
+- [x] Implement Footer component
+- [x] Update App.jsx to render all components
+- [x] Add global styles
