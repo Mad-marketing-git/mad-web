@@ -12,20 +12,20 @@ const Page4Section = () => {
   const videos = [vidClient, vidMobile, vidStack, vidTech];
   const videosText = [
     {
-      title: 'Client-Centric Approach 1',
-      description: 'We listen, understand your unique challenges, and tailor every solution to fit your business perfectly. (Dummy Text 1)',
+      title: 'Client-Centric Approach',
+      description: 'We listen, understand your unique challenges, and tailorevery solution to fit your business perfectly.',
     },
     {
-      title: 'Client-Centric Approach 2',
-      description: 'We listen, understand your unique challenges, and tailor every solution to fit your business perfectly. (Dummy Text 2)',
+      title: 'Mobile-First Mindset',
+      description: 'With over half of web traffic coming from mobile devices,your site will deliver flawless experiences across smartphones, tablets, and desktops.',
     },
     {
-      title: 'Client-Centric Approach 3',
-      description: 'We listen, understand your unique challenges, and tailor every solution to fit your business perfectly. (Dummy Text 3)',
+      title: 'Result-Oriented Design',
+      description: 'Every element on your site drives toward a goal — be it lead generation, e-commerce sales, or brand awareness.',
     },
     {
-      title: 'Client-Centric Approach 4',
-      description: 'We listen, understand your unique challenges, and tailor every solution to fit your business perfectly. (Dummy Text 4)',
+      title: 'Cutting-Edge Technology',
+      description: 'Utilizing the latest tools and frameworks, we build websites that are fast, secure, and scalable.',
     },
   ];
 

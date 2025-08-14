@@ -66,7 +66,7 @@
 .phoneTitle {
   font-size: 1.8rem; /* Original font size */
   margin-bottom: 15px;
-  color: red; /* Original color */
+  color: white; /* Original color */
   text-shadow: 0 0 5px rgba(255, 0, 0, 0.7), 0 0 10px rgba(255, 0, 0, 0.5); /* Original text-shadow */
   z-index: 100; /* Changed z-index */
 }
@@ -74,8 +74,8 @@
 .phoneDescription {
   font-size: 1.1rem; /* Original font size */
   line-height: 1.5;
-  color: red; /* Original color */
-  text-shadow: 0 0 3px rgba(255, 0, 0, 0.6), 0 0 6px rgba(255, 0, 0, 0.4); /* Original text-shadow */
+  color: white; /* Original color */
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.6), 0 0 6px rgba(255, 0, 0, 0.4); /* Original text-shadow */
   z-index: 100; /* Changed z-index */
 }
 
