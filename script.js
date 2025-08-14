@@ -1,3 +1,27 @@
+// Phone mockup slideshow logic (Page 4)
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.phone-slide');
+    let currentSlide = 0;
+    function showSlide(idx) {
+        slides.forEach((slide, i) => {
+            slide.style.opacity = (i === idx) ? '1' : '0';
+        });
+    }
+    showSlide(currentSlide);
+    document.getElementById('phone-slide-prev').addEventListener('click', function() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    });
+    document.getElementById('phone-slide-next').addEventListener('click', function() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    });
+    // Optional: auto-advance every 4 seconds
+    setInterval(function() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }, 4000);
+});
 // DOM Elements
 const navbar = document.querySelector('.navbar');
 const hamburger = document.querySelector('.hamburger');

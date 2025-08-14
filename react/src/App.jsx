@@ -1,9 +1,9 @@
 
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import WhatWeDo from './components/WhatWeDo';
-import WhyPartnerWithUs from './components/WhyPartnerWithUs';
-import CoreServices from './components/CoreServices';
+import Page2Section from './components/Page2Section';
+import Page3Section from './components/Page3Section';
+import Page4Section from './components/Page4Section';
 import KnowledgeBase from './components/KnowledgeBase';
 import Contact from './components/Contact';
 import Footer from './components/Footer'; // Import the Footer component
@@ -14,9 +14,9 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <WhatWeDo />
-      <WhyPartnerWithUs />
-      <CoreServices />
+      <Page2Section />
+      <Page3Section />
+      <Page4Section />
       <KnowledgeBase />
       <Contact />
       <Footer /> {/* Render the Footer component */}

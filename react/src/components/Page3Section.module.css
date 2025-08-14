@@ -1,0 +1,95 @@
+.page3Section {
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.8), 0 0 15px rgba(255, 0, 0, 0.6); /* Red glow */
+}
+
+.content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6), 0 6px 6px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease; /* Add transition for smooth hover */
+  display: flex; /* Use flexbox for centering content */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px; /* Ensure consistent height */
+}
+
+.card:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+.cardIcon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.7), 0 0 10px rgba(255, 0, 0, 0.5); /* Red glow */
+}
+
+.button {
+  background: linear-gradient(to right, #ffcc00, #ff4500); /* Orange/Yellow gradient */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 40px;
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.7); /* Glow effect */
+}
+
+.button:hover {
+  background-color: #ffdd44;
+}
+
+.cardDescription {
+  color: white; /* Text color for description */
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0 10px; /* Add some padding for better readability */
+  text-shadow: 0 0 5px rgba(0, 123, 255, 0.7), 0 0 10px rgba(0, 123, 255, 0.5); /* Blue glow */
+}

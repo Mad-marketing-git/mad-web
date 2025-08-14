@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './WhyPartnerWithUs.module.css';
 import sectionBg from '../assets/IMAGE ASSETS BG REMOVED/TB SECTION 2 BG.png'; // Background image for the section
-import phoneImage from '../assets/IMAGE ASSETS BG REMOVED/TB DEVICE ICON.png'; // Placeholder for phone image
+import phoneImage from '../assets/IMAGE ASSETS BG REMOVED/cards/TB DEVICE ICON.png'; // Placeholder for phone image
 
 const WhyPartnerWithUs = () => {
   return (
