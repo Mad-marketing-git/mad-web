@@ -56,3 +56,6 @@
 - Set phoneTitle and phoneDescription to position: absolute; and placed them at top: 0; left: 0; (with phoneDescription at top: 50px;) with a very large font size in Page4Section.module.css for debugging text visibility.
 - Reverted Page4Section.jsx and Page4Section.module.css to their state before text-related changes, as requested by the user.
 - Reconstructed Page4Section.module.css and changed object-fit to contain for .backgroundImage to address "image too big" issue.
+- Re-introduced text elements in Page4Section.jsx and reverted their styling in Page4Section.module.css to original state.
+- Increased z-index of phoneTitle and phoneDescription to 9999 in Page4Section.module.css to ensure visibility.
+- Changed z-index of phoneTitle and phoneDescription to 100 in Page4Section.module.css as per user request.

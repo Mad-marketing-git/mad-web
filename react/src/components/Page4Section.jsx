@@ -7,10 +7,28 @@ import vidClient from '../assets/phone-screen-video/VID BG CLIENT.mp4';
 import vidMobile from '../assets/phone-screen-video/VID BG MOBILE.mp4';
 import vidStack from '../assets/phone-screen-video/VID BG STACK.mp4';
 import vidTech from '../assets/phone-screen-video/VID BG TECH.mp4';
-// Removed import vidServices from '../assets/phone-screen-video/VID SERVICES BG.mp4';
 
 const Page4Section = () => {
-  const videos = [vidClient, vidMobile, vidStack, vidTech]; // Removed vidServices
+  const videos = [vidClient, vidMobile, vidStack, vidTech];
+  const videosText = [
+    {
+      title: 'Client-Centric Approach 1',
+      description: 'We listen, understand your unique challenges, and tailor every solution to fit your business perfectly. (Dummy Text 1)',
+    },
+    {
+      title: 'Client-Centric Approach 2',
+      description: 'We listen, understand your unique challenges, and tailor every solution to fit your business perfectly. (Dummy Text 2)',
+    },
+    {
+      title: 'Client-Centric Approach 3',
+      description: 'We listen, understand your unique challenges, and tailor every solution to fit your business perfectly. (Dummy Text 3)',
+    },
+    {
+      title: 'Client-Centric Approach 4',
+      description: 'We listen, understand your unique challenges, and tailor every solution to fit your business perfectly. (Dummy Text 4)',
+    },
+  ];
+
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const sectionRef = useRef(null);
   const isScrolling = useRef(false); // To prevent rapid video changes
@@ -73,9 +91,8 @@ const Page4Section = () => {
               playsInline // Important for mobile autoplay
               className={styles.phoneVideo}
             />
-            {/* Temporarily removed phoneTitle and phoneDescription */}
-            {/* <h3 className={styles.phoneTitle}>Client-Centric Approach</h3> */}
-            {/* <p className={styles.phoneDescription}>We listen, understand your unique challenges, and tailor every solution to fit your business perfectly.</p> */}
+            <h3 className={styles.phoneTitle}>{videosText[currentVideoIndex].title}</h3>
+            <p className={styles.phoneDescription}>{videosText[currentVideoIndex].description}</p>
           </div>
         </div>
         <div className={styles.buttonContainer}> {/* New wrapper for button */}

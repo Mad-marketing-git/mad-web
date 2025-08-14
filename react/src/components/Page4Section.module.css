@@ -26,16 +26,17 @@
 }
 
 .phoneContainer {
-  width: 77%; /* Decreased slightly */
-  height: 54%; /* Decreased slightly */
+  width: 73%; /* Decreased slightly */
+  height: 60%; /* Decreased slightly */
   position: absolute;
-  top: 51%; /* Shifted slightly up */
+  top: 50%; /* Shifted slightly up */
   left: 48%;
   transform: translate(-50%, -50%);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: -1; /* Explicitly set z-index to be above background image */
+  flex-direction: column; /* Added for text centering */
+  justify-content: center; /* Added for text centering */
+  align-items: center; /* Added for text centering */
+  z-index:-1; /* Explicitly set z-index to be above background image */
 }
 
 .phoneScreen {
@@ -67,6 +68,7 @@
   margin-bottom: 15px;
   color: red; /* Original color */
   text-shadow: 0 0 5px rgba(255, 0, 0, 0.7), 0 0 10px rgba(255, 0, 0, 0.5); /* Original text-shadow */
+  z-index: 100; /* Changed z-index */
 }
 
 .phoneDescription {
@@ -74,6 +76,7 @@
   line-height: 1.5;
   color: red; /* Original color */
   text-shadow: 0 0 3px rgba(255, 0, 0, 0.6), 0 0 6px rgba(255, 0, 0, 0.4); /* Original text-shadow */
+  z-index: 100; /* Changed z-index */
 }
 
 .button {
