@@ -59,4 +59,8 @@
 - Re-introduced text elements in Page4Section.jsx and reverted their styling in Page4Section.module.css to original state.
 - Increased z-index of phoneTitle and phoneDescription to 9999 in Page4Section.module.css to ensure visibility.
 - Removed temporary background colors from .phoneContainer and .phoneScreen in Page4Section.module.css.
-- Fixed ReferenceError: CoreServices is not defined by correcting the import statement in App.jsx.
+- Implemented a new responsive strategy for Page4Section using a mainContentWrapper.
+- Implemented gradient lines in CoreServices.jsx and CoreServices.module.css for Page 5.
+- Implemented scroll animation for gradient lines in CoreServices.jsx and CoreServices.module.css.
+- Adjusted top property of .lineVertical in CoreServices.module.css to start under lineHorizontalTop.
+- Increased height of .lineVertical in CoreServices.module.css to make it go down further.

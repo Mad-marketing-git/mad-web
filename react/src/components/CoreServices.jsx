@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react'; // Added useRef
 import styles from './CoreServices.module.css';
 import backgroundVideo from '../assets/VID SERVICES BG.mp4'; // Import the video
 
@@ -30,6 +30,48 @@ const CoreServices = () => {
     },
   ];
 
+  // Refs for line elements
+  const lineHorizontalTopRef = useRef(null);
+  const lineVerticalRef = useRef(null);
+  const lineHorizontalMiddle1Ref = useRef(null);
+  const lineHorizontalMiddle2Ref = useRef(null);
+  const lineHorizontalBottomRef = useRef(null);
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null, // viewport
+      rootMargin: '0px',
+      threshold: 0.5, // Trigger when 50% of the element is visible
+    };
+
+    const observerCallback = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(styles.animateLine);
+          observer.unobserve(entry.target); // Stop observing once animated
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Observe each line element
+    if (lineHorizontalTopRef.current) observer.observe(lineHorizontalTopRef.current);
+    if (lineVerticalRef.current) observer.observe(lineVerticalRef.current);
+    if (lineHorizontalMiddle1Ref.current) observer.observe(lineHorizontalMiddle1Ref.current);
+    if (lineHorizontalMiddle2Ref.current) observer.observe(lineHorizontalMiddle2Ref.current);
+    if (lineHorizontalBottomRef.current) observer.observe(lineHorizontalBottomRef.current);
+
+    return () => {
+      // Disconnect observer on unmount
+      if (lineHorizontalTopRef.current) observer.unobserve(lineHorizontalTopRef.current);
+      if (lineVerticalRef.current) observer.unobserve(lineVerticalRef.current);
+      if (lineHorizontalMiddle1Ref.current) observer.unobserve(lineHorizontalMiddle1Ref.current);
+      if (lineHorizontalMiddle2Ref.current) observer.unobserve(lineHorizontalMiddle2Ref.current);
+      if (lineHorizontalBottomRef.current) observer.unobserve(lineHorizontalBottomRef.current);
+    };
+  }, []); // Empty dependency array means this effect runs once on mount
+
   return (
     <section className={styles.coreServices}>
       <video className={styles.backgroundVideo} autoPlay loop muted playsInline>
@@ -37,6 +79,13 @@ const CoreServices = () => {
       </video>
       <div className={styles.contentOverlay}>
         <h2>OUR CORE SERVICES</h2>
+        {/* Lines */}
+        <div ref={lineHorizontalTopRef} className={styles.lineHorizontalTop}></div>
+        <div ref={lineVerticalRef} className={styles.lineVertical}></div>
+        <div ref={lineHorizontalMiddle1Ref} className={styles.lineHorizontalMiddle1}></div>
+        <div ref={lineHorizontalMiddle2Ref} className={styles.lineHorizontalMiddle2}></div>
+        <div ref={lineHorizontalBottomRef} className={styles.lineHorizontalBottom}></div>
+
         <div className={styles.servicesGrid}>
           {services.map((service, index) => (
             <div key={index} className={styles.serviceCard}>

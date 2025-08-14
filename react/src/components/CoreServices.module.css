@@ -85,3 +85,66 @@
 .talkToUsButton:hover {
   background-color: #ffdd44;
 }
+
+/* Line styles */
+.lineHorizontalTop,
+.lineVertical,
+.lineHorizontalMiddle1,
+.lineHorizontalMiddle2,
+.lineHorizontalBottom {
+  position: absolute;
+  background: linear-gradient(to right, #00c6ff, #0072ff); /* Blue gradient */
+  z-index: 0; /* Place behind text, above video */
+  opacity: 0; /* Initially hidden */
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.lineHorizontalTop {
+  width: 100px; /* Adjust as needed */
+  height: 2px;
+  top: 100px; /* Adjust position */
+  left: 50%;
+  transform: translateX(-50%) scaleX(0); /* Start from center, scaleX(0) */
+  transform-origin: center;
+}
+
+.lineVertical {
+  width: 2px;
+  height: 700px; /* Increased height to go down further */
+  top: 450px; /* Adjusted to start under lineHorizontalTop */
+  left: 50%;
+  transform: translateY(-50%) scaleY(0); /* Start from center, scaleY(0) */
+  transform-origin: center;
+}
+
+.lineHorizontalMiddle1,
+.lineHorizontalMiddle2,
+.lineHorizontalBottom {
+  width: 50px; /* Adjust as needed */
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0); /* Start from center, scaleX(0) */
+  transform-origin: center;
+}
+
+.lineHorizontalMiddle1 {
+  top: 320px; /* Adjust position */
+}
+
+.lineHorizontalMiddle2 {
+  top: 560px; /* Adjust position */
+}
+
+.lineHorizontalBottom {
+  top: 800px; /* Adjust position */
+}
+
+/* Animation class */
+.animateLine {
+  transform: translateX(-50%) scaleX(1); /* Animate to full width */
+  opacity: 1;
+}
+
+.lineVertical.animateLine {
+  transform: translateY(-50%) scaleY(1); /* Animate to full height */
+}
