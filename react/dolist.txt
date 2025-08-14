@@ -57,5 +57,6 @@
 - Reverted Page4Section.jsx and Page4Section.module.css to their state before text-related changes, as requested by the user.
 - Reconstructed Page4Section.module.css and changed object-fit to contain for .backgroundImage to address "image too big" issue.
 - Re-introduced text elements in Page4Section.jsx and reverted their styling in Page4Section.module.css to original state.
-- Changed z-index of phoneTitle and phoneDescription to 100 in Page4Section.module.css as per user request.
-- Removed all uncommitted changes from the working directory.
+- Increased z-index of phoneTitle and phoneDescription to 9999 in Page4Section.module.css to ensure visibility.
+- Removed temporary background colors from .phoneContainer and .phoneScreen in Page4Section.module.css.
+- Fixed ReferenceError: CoreServices is not defined by correcting the import statement in App.jsx.

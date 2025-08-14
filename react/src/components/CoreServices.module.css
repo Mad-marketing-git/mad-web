@@ -1,39 +1,87 @@
 .coreServices {
+  position: relative;
+  overflow: hidden;
   padding: 4rem 2rem;
   text-align: center;
-  background-color: #060918; /* Same as body background */
   color: white;
+  min-height: 100vh; /* Ensure it takes full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.backgroundVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Place behind content */
+}
+
+.contentOverlay {
+  position: relative;
+  z-index: 1; /* Place content above video */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  border-radius: 10px;
 }
 
 .coreServices h2 {
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: #ffcc00; /* Yellow/orange color */
+  color: #ff4500; /* OrangeRed */
+  text-shadow: 0 0 8px rgba(255, 69, 0, 0.8), 0 0 15px rgba(255, 69, 0, 0.6);
 }
 
 .servicesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
   gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1000px; /* Adjust grid width */
+  margin: 0 auto 3rem auto; /* Add margin bottom */
 }
 
 .serviceCard {
-  background-color: #1a1a2a; /* Slightly lighter dark blue */
-  padding: 2rem;
+  background-color: transparent; /* Transparent background */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
   border-radius: 10px;
+  padding: 1.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: left;
+  position: relative; /* For line positioning */
 }
 
 .serviceCard h3 {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #ff6600; /* Orange color */
+  margin-bottom: 0.5rem;
+  color: white; /* White text */
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.7), 0 0 10px rgba(255, 0, 0, 0.5); /* Red glow */
 }
 
 .serviceCard p {
   font-size: 1rem;
   line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+}
+
+.talkToUsButton {
+  background: linear-gradient(to right, #ffcc00, #ff4500); /* Orange/Yellow gradient */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.7); /* Glow effect */
+}
+
+.talkToUsButton:hover {
+  background-color: #ffdd44;
 }
