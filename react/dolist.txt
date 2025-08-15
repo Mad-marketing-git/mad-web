@@ -49,7 +49,7 @@
 - Removed click-based navigation buttons and handlers.
 - Implemented scroll event listener with logic to prevent page scroll until all videos are played.
 - Removed VID SERVICES BG.mp4 from the video slideshow in Page4Section.jsx.
-- Added dynamic text overlays to videos in Page4Section.jsx.
+- Added dynamic.page-6.PNG text overlays to videos in Page4Section.jsx.
 - Re-introduced phoneTitle and phoneDescription elements.
 - Created videosText array to store text for each video.
 - Changed phoneTitle and phoneDescription color to white and removed text-shadow in Page4eSection.module.css for debugging text visibility.
@@ -81,3 +81,6 @@
 - Changed the direction of the red car in the Contact page animation.
 - Added a rotating spinner to the Contact page.
 - Added two rotating spinners to the Contact page, one on the left and one on the right.
+- Created the footer section with the new design.
+- Replaced the map image in the footer with an embedded Google Map.
+- Reverted the embedded Google Map to the previous version that does not require an API key.

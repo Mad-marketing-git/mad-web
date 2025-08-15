@@ -1,6 +1,6 @@
 .footer {
-  background-color: #1a1a2a; /* Dark blue background */
-  color: white;
+  background-color: #fff;
+  color: #000;
   padding: 3rem 2rem;
   font-size: 0.9rem;
 }
@@ -13,7 +13,6 @@
   max-width: 1200px;
   margin: 0 auto;
   padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footerSection {
@@ -32,20 +31,19 @@
   margin-bottom: 1rem;
 }
 
-.socialIcons span {
-  margin-right: 1rem;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
 .footerSection h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: #ffcc00; /* Yellow/orange color */
+  text-align: center;
+  color: #000;
+  margin-top: 1cm;
 }
 
 .footerSection ul {
   list-style: none;
+  text-align: left;
+  margin-left: 3cm;
+  margin-top: 1cm;
   padding: 0;
 }
 
@@ -54,17 +52,22 @@
 }
 
 .footerSection ul li a {
-  color: white;
+  color: #000;
   text-decoration: none;
 }
 
-.footerSection ul li a:hover {
-  color: #ff6600; /* Orange color on hover */
+.mapImage {
+  width: 150px;
+  margin-bottom: 1rem;
 }
 
 .copyright {
+  width: 100%;
   text-align: center;
-  padding-top: 1.5rem;
+  padding: 1.5rem;
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #fff;
+  background-color: #e91e63;
+  margin-left: -25px;
+  margin-right: -30px;
 }
