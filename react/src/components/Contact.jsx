@@ -9,10 +9,14 @@ import yellowCar from '../assets/IMAGE ASSETS BG REMOVED/TB YELLOW CAR.png';
 import yellowBus from '../assets/IMAGE ASSETS BG REMOVED/TB YELLOW BUS.png';
 import wheel from '../assets/3wheel.png';
 import van from '../assets/van.png';
+import spinner from '../assets/IMAGE ASSETS BG REMOVED/TB SPINNER.png';
+
 const Contact = () => {
   return (
     <div className={styles.page6Container}>
       <img src={background} alt="background" className={styles.backgroundImage} />
+      <img src={spinner} alt="spinner" className={`${styles.spinner} ${styles.spinnerLeft}`} />
+      <img src={spinner} alt="spinner" className={`${styles.spinner} ${styles.spinnerRight}`} />
       <div className={styles.content}>
         <div className={styles.talkToUs}>
           <h2>TALK TO US</h2>

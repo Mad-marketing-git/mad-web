@@ -79,3 +79,5 @@
 - Fixed the oversized background image in Contact page by changing object-fit to contain.
 - Made the background image in Contact page wider by changing object-fit to fill.
 - Changed the direction of the red car in the Contact page animation.
+- Added a rotating spinner to the Contact page.
+- Added two rotating spinners to the Contact page, one on the left and one on the right.
