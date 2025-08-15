@@ -1,3 +1,4 @@
+
 - Create Page2Section.jsx and Page2Section.module.css to build the second page.
 - The second page has a background image and a carousel of computer screens.
 - The images for the carousel are located in src/assets/IMAGE ASSETS BG REMOVED/ and their names start with TB PORTFOLIO.
@@ -73,3 +74,8 @@
 - Fixed the oversized image in KnowledgeBase by adding a class and setting a fixed width.
 - Updated the text colors and design of KnowledgeBase to match the provided image.
 - Added a blue glow to the article image text in KnowledgeBase.
+- Updated the background of the Contact page to use a new image and removed the car animation.
+- Re-implemented the moving cars and styled the contact form to match the new design.
+- Fixed the oversized background image in Contact page by changing object-fit to contain.
+- Made the background image in Contact page wider by changing object-fit to fill.
+- Changed the direction of the red car in the Contact page animation.
