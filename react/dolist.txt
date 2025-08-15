@@ -51,7 +51,7 @@
 - Added dynamic text overlays to videos in Page4Section.jsx.
 - Re-introduced phoneTitle and phoneDescription elements.
 - Created videosText array to store text for each video.
-- Changed phoneTitle and phoneDescription color to white and removed text-shadow in Page4Section.module.css for debugging text visibility.
+- Changed phoneTitle and phoneDescription color to white and removed text-shadow in Page4eSection.module.css for debugging text visibility.
 - Temporarily removed overflow: hidden and padding from .phoneScreen and increased font size of phoneTitle and phoneDescription in Page4Section.module.css for debugging text visibility.
 - Set phoneTitle and phoneDescription to position: absolute; and placed them at top: 0; left: 0; (with phoneDescription at top: 50px;) with a very large font size in Page4Section.module.css for debugging text visibility.
 - Reverted Page4Section.jsx and Page4Section.module.css to their state before text-related changes, as requested by the user.
@@ -64,3 +64,12 @@
 - Implemented scroll animation for gradient lines in CoreServices.jsx and CoreServices.module.css.
 - Adjusted top property of .lineVertical in CoreServices.module.css to start under lineHorizontalTop.
 - Increased height of .lineVertical in CoreServices.module.css to make it go down further.
+- Create Page6Section.jsx and Page6Section.module.css to build the sixth page.
+- The sixth page has a background image, a knowledge base section, and a contact form.
+- The images for the page are located in src/assets/IMAGE ASSETS BG REMOVED/page-6/.
+- Replaced Contact with Page6Section in App.jsx.
+- Split Page6Section into KnowledgeBase (Page 5) and Contact (Page 6).
+- Updated KnowledgeBase to remove background image and use a solid color, and use BLOG TILE.png for the article image.
+- Fixed the oversized image in KnowledgeBase by adding a class and setting a fixed width.
+- Updated the text colors and design of KnowledgeBase to match the provided image.
+- Added a blue glow to the article image text in KnowledgeBase.
