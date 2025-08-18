@@ -183,3 +183,14 @@
       transform: rotate(360deg);
     }
   }
+
+@media (max-width: 768px) {
+  .talkToUs {
+    width: 100%;
+  }
+
+  .talkToUs h2 {
+    font-size: 2rem;
+    margin-top: -157px;
+  }
+}

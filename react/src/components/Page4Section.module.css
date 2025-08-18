@@ -118,12 +118,24 @@
 }
 
 @media (max-width: 768px) {
+  .page4Section {
+    padding: 0;
+  }
+
+  .backgroundImage {
+    display: none;
+  }
+
   .phoneContainer {
-    width: 80vw; /* Larger on smaller screens */
-    height: 45vw; /* Maintain aspect ratio */
-    top: 50%; /* Keep centered */
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
+  .phoneScreen {
+    padding: 0;
   }
 
   .content h2 {
@@ -144,11 +156,11 @@
   }
 
   .headingContainer {
-    top: 2vh; /* Adjust top position */
+    top: 5vh; /* Adjust top position */
   }
 
   .buttonContainer {
-    bottom: 2vh; /* Adjust bottom position */
+    bottom: 5vh; /* Adjust bottom position */
   }
 }
 

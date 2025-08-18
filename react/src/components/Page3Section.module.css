@@ -93,3 +93,27 @@
   padding: 0 10px; /* Add some padding for better readability */
   text-shadow: 0 0 5px rgba(0, 123, 255, 0.7), 0 0 10px rgba(0, 123, 255, 0.5); /* Blue glow */
 }
+
+@media (max-width: 768px) {
+  .content h2 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .cardsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .page3Section {
+    padding: 50px 10px;
+  }
+}

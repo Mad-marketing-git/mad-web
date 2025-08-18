@@ -1,5 +1,15 @@
 [
   {"task": "add @src/assets/TB LOGO.png to hero page before the heading", "status": "completed"},
   {"task": "hide the nav bar in hero page. it should visible on second page", "status": "completed"},
-  {"task": "link the nav bar to right pages", "status": "completed"}
+  {"task": "link the nav bar to right pages", "status": "completed"},
+  {"task": "make this site mobile responsive", "status": "completed"},
+  {"task": "for mobile nav bar should be a humbeger menu", "status": "completed"},
+  {"task": "for mobile in page 4 dont need the bg just show the video in fullscreen", "status": "completed"},
+  {"task": "in page 5 for mobile, dont give buttons just make it automaticaly change", "status": "completed"},
+  {"task": "for mobile page 6 form should move litte up", "status": "completed"},
+  {"task": "move page 6 form up by 1.5cm more on mobile", "status": "completed"},
+  {"task": "re-enable vehicles and css animation in page 6 for mobile", "status": "completed"},
+  {"task": "for mobile dont show the css animation line in service page", "status": "completed"},
+  {"task": "for mobile make the content in footer section center", "status": "completed"},
+  {"task": "in the footer section text color must be blue", "status": "completed"}
 ]

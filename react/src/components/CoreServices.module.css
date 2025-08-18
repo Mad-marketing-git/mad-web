@@ -148,3 +148,38 @@
 .lineVertical.animateLine {
   transform: translateY(-50%) scaleY(1); /* Animate to full height */
 }
+
+@media (max-width: 768px) {
+  .coreServices h2 {
+    font-size: 2rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceCard {
+    padding: 1rem;
+  }
+
+  .serviceCard h3 {
+    font-size: 1.2rem;
+  }
+
+  .serviceCard p {
+    font-size: 0.9rem;
+  }
+
+  .talkToUsButton {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .lineHorizontalTop,
+  .lineVertical,
+  .lineHorizontalMiddle1,
+  .lineHorizontalMiddle2,
+  .lineHorizontalBottom {
+    display: none;
+  }
+}

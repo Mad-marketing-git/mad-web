@@ -71,3 +71,26 @@
   width: 150px; /* Adjust as needed */
   margin-bottom: 1rem;
 }
+
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .heroContent p {
+    font-size: 1rem;
+  }
+
+  .heroButton {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .graphic1, .graphic2 {
+    display: none;
+  }
+}

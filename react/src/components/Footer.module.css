@@ -52,7 +52,7 @@
 }
 
 .footerSection ul li a {
-  color: #000;
+  color: blue;
   text-decoration: none;
 }
 
@@ -70,4 +70,20 @@
   background-color: #e91e63;
   margin-left: -25px;
   margin-right: -30px;
+}
+
+@media (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerSection {
+    text-align: center;
+  }
+
+  .footerSection ul {
+    text-align: center;
+    margin-left: 0;
+  }
 }

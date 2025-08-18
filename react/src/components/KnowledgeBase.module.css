@@ -67,3 +67,60 @@
     padding: 1rem;
     border-radius: 5px;
   }
+
+.mobileArticles {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .knowledgeBase h2 {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  .knowledgeBase p {
+    font-size: 1rem;
+  }
+
+  .articles {
+    flex-direction: column;
+  }
+
+  .articleImage {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .articleImageTag {
+    width: 100%;
+    height: auto;
+  }
+
+  .knowledgeBase {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .desktopArticles {
+    display: none;
+  }
+
+  .mobileArticles {
+    display: block;
+  }
+
+  .articleContent {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .articleLink {
+    background-color: #1e2a4a;
+    padding: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+  }
+}

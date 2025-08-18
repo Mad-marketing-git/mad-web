@@ -49,3 +49,17 @@
 .button:hover {
   background-color: #ffdd44;
 }
+
+@media (max-width: 768px) {
+  .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .carouselImage {
+    width: 100%;
+  }
+
+  .page2Section {
+    padding: 50px 10px;
+  }
+}
