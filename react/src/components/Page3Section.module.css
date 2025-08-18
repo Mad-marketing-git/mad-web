@@ -4,11 +4,13 @@
   padding: 100px 20px;
   text-align: center;
   color: white;
+  overflow-x: hidden;
 }
 
 .content {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .content h2 {
@@ -39,7 +41,7 @@
 .card {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  padding: 20px;
+  padding: 15px;
   width: 250px;
   text-align: center;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6), 0 6px 6px rgba(0, 0, 0, 0.4);
@@ -48,7 +50,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 250px; /* Ensure consistent height */
+  min-height: 300px; /* Ensure consistent height */
 }
 
 .card:hover {
