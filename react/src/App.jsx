@@ -1,4 +1,5 @@
 
+import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Page2Section from './components/Page2Section';
@@ -11,9 +12,28 @@ import Footer from './components/Footer'; // Import the Footer component
 import './App.css';
 
 function App() {
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroHeight = window.innerHeight;
+      if (window.scrollY > heroHeight) {
+        setShowNavbar(true);
+      } else {
+        setShowNavbar(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <Navbar />
+      {showNavbar && <Navbar />}
       <Hero />
       <Page2Section />
       <Page3Section />
@@ -27,3 +47,4 @@ function App() {
 }
 
 export default App;
+

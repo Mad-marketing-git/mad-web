@@ -66,3 +66,8 @@
   bottom: 5%;
   right: 10%;
 }
+
+.logo {
+  width: 150px; /* Adjust as needed */
+  margin-bottom: 1rem;
+}

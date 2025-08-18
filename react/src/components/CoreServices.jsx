@@ -73,7 +73,7 @@ const CoreServices = () => {
   }, []); // Empty dependency array means this effect runs once on mount
 
   return (
-    <section className={styles.coreServices}>
+    <section id="services" className={styles.coreServices}>
       <video className={styles.backgroundVideo} autoPlay loop muted playsInline>
         <source src={backgroundVideo} type="video/mp4" />
       </video>
