@@ -8,6 +8,7 @@
         {"task": "Fix margin on the right side of the website", "status": "completed"},
         {"task": "Center content in KnowledgeBase section on mobile", "status": "completed"},
         {"task": "Fix unequal margins on Page 3", "status": "completed"},
-        {"task": "Fix unequal margins on KnowledgeBase page", "status": "completed"}
+        {"task": "Fix unequal margins on KnowledgeBase page", "status": "completed"},
+        {"task": "Implement smooth scrolling between sections using buttons", "status": "completed"}
     ]
 }

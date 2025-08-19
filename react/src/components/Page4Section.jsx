@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, forwardRef } from 'react';
 import styles from './Page4Section.module.css';
 import page4Bg from '../assets/page-4-bg.png'; // Keep import for <img> src
 
@@ -8,7 +8,7 @@ import vidMobile from '../assets/phone-screen-video/VID BG MOBILE.mp4';
 import vidStack from '../assets/phone-screen-video/VID BG STACK.mp4';
 import vidTech from '../assets/phone-screen-video/VID BG TECH.mp4';
 
-const Page4Section = () => {
+const Page4Section = forwardRef(({ nextSection }, ref) => {
   const videos = [vidClient, vidMobile, vidStack, vidTech];
   const videosText = [
     {
@@ -74,7 +74,7 @@ const Page4Section = () => {
   }, [currentVideoIndex, videos.length]); // Re-run effect when video index changes
 
   return (
-    <section ref={sectionRef} className={styles.page4Section}>
+    <section ref={ref} className={styles.page4Section}>
       <img src={page4Bg} alt="Background" className={styles.backgroundImage} />
       <div className={styles.content}>
         <div className={styles.headingContainer}> {/* New wrapper for heading */}
@@ -96,11 +96,11 @@ const Page4Section = () => {
           </div>
         </div>
         <div className={styles.buttonContainer}> {/* New wrapper for button */}
-          <button className={styles.button}>CORE SERVICES</button>
+          <button className={styles.button} onClick={nextSection}>CORE SERVICES</button>
         </div>
       </div>
     </section>
   );
-};
+});
 
 export default Page4Section;

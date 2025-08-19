@@ -23,6 +23,7 @@
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   margin-bottom: 40px;
+  margin-top: 2cm;
 }
 
 .carouselImage {
@@ -44,6 +45,7 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 1cm;
 }
 
 .button:hover {

@@ -1,9 +1,9 @@
 
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styles from './KnowledgeBase.module.css';
 import blogTile from '../assets/BLOG TILE.png';
 
-const KnowledgeBase = () => {
+const KnowledgeBase = forwardRef(({ nextSection }, ref) => {
   const articles = [
     {
       image: blogTile,
@@ -36,7 +36,7 @@ const KnowledgeBase = () => {
   const otherArticles = articles.slice(1);
 
   return (
-    <div className={styles.page5Container}>
+    <div className={styles.page5Container} ref={ref}>
       <div className={styles.content}>
         <div className={styles.knowledgeBase}>
           <h2>KNOWLEDGE BASE</h2>
@@ -54,8 +54,9 @@ const KnowledgeBase = () => {
           </div>
         </div>
       </div>
+      <button className={styles.button} onClick={nextSection}>CONTACT US</button>
     </div>
   );
-};
+});
 
 export default KnowledgeBase;

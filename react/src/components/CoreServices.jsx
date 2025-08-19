@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react'; // Added useRef
+import React, { useState, useEffect, useRef, forwardRef } from 'react'; // Added useRef
 import styles from './CoreServices.module.css';
 import backgroundVideo from '../assets/VID SERVICES BG.mp4'; // Import the video
 
-const CoreServices = () => {
+const CoreServices = forwardRef(({ nextSection }, ref) => {
   const services = [
     {
       title: 'Strategic Digital Planning',
@@ -73,7 +73,7 @@ const CoreServices = () => {
   }, []); // Empty dependency array means this effect runs once on mount
 
   return (
-    <section id="services" className={styles.coreServices}>
+    <section id="services" className={styles.coreServices} ref={ref}>
       <video className={styles.backgroundVideo} autoPlay loop muted playsInline>
         <source src={backgroundVideo} type="video/mp4" />
       </video>
@@ -94,10 +94,11 @@ const CoreServices = () => {
             </div>
           ))}
         </div>
-        <button className={styles.talkToUsButton}>TALK TO US</button>
+        <button className={styles.talkToUsButton} onClick={nextSection}>TALK TO US</button>
       </div>
     </section>
   );
-};
+});
+
 
 export default CoreServices;

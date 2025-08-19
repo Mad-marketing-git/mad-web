@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState, forwardRef } from 'react';
 import styles from './Contact.module.css';
 import background from '../assets/IMAGE ASSETS BG REMOVED/page-6/page-6-bg.png';
 import redCar from '../assets/IMAGE ASSETS BG REMOVED/TB RED CAR.png';
@@ -11,20 +11,84 @@ import wheel from '../assets/3wheel.png';
 import van from '../assets/van.png';
 import spinner from '../assets/IMAGE ASSETS BG REMOVED/TB SPINNER.png';
 
-const Contact = () => {
+const Contact = forwardRef((props, ref) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const { name, email, message } = formData;
+    if (!name || !email || !message) {
+      alert('Please fill out all required fields.');
+      return;
+    }
+
+    try {
+      const response = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert('Email sent successfully!');
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        alert('Failed to send email.');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('An error occurred while sending the email.');
+    }
+  };
+
   return (
-    <div id="contact" className={styles.page6Container}>
+    <div id="contact" className={styles.page6Container} ref={ref}>
       <img src={background} alt="background" className={styles.backgroundImage} />
       <img src={spinner} alt="spinner" className={`${styles.spinner} ${styles.spinnerLeft}`} />
       <img src={spinner} alt="spinner" className={`${styles.spinner} ${styles.spinnerRight}`} />
       <div className={styles.content}>
         <div className={styles.talkToUs}>
           <h2>TALK TO US</h2>
-          <form>
-            <input type="text" placeholder="Your Name" />
-            <input type="email" placeholder="Email" />
-            <input type="text" placeholder="Phone: +94" />
-            <textarea placeholder="Your Message"></textarea>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+            <input
+              type="text"
+              name="phone"
+              placeholder="Phone: +94"
+              value={formData.phone}
+              onChange={handleChange}
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              value={formData.message}
+              onChange={handleChange}
+            ></textarea>
             <button type="submit">FULL SEND!</button>
           </form>
         </div>
@@ -40,6 +104,6 @@ const Contact = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Contact;

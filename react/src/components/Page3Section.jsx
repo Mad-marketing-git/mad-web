@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, forwardRef } from 'react';
 import styles from './Page3Section.module.css';
 import page3Bg from '../assets/page-3-bg.png';
 import bulbIcon from '../assets/IMAGE ASSETS BG REMOVED/cards/TB BULB ICON.png';
@@ -6,7 +6,7 @@ import deviceIcon from '../assets/IMAGE ASSETS BG REMOVED/cards/TB DEVICE ICON.p
 import scaleIcon from '../assets/IMAGE ASSETS BG REMOVED/cards/TB SCALE ICON.png';
 import commsIcon from '../assets/IMAGE ASSETS BG REMOVED/cards/TB COMMS ICON.png';
 
-const Page3Section = () => {
+const Page3Section = forwardRef(({ nextSection }, ref) => {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   const cards = [
@@ -33,7 +33,7 @@ const Page3Section = () => {
   ];
 
   return (
-    <section className={styles.page3Section} style={{ backgroundImage: `url(${page3Bg})` }}>
+    <section className={styles.page3Section} style={{ backgroundImage: `url(${page3Bg})` }} ref={ref}>
       <div className={styles.content}>
         <h2>WHAT WE DO. AND WHY.</h2>
         <p>We create captivating digital experiences with seamless technology and thoughtful design to drive long-term growth. From strategy to ongoing support, our process ensures your platform scales with your ambitions.</p>
@@ -57,10 +57,11 @@ const Page3Section = () => {
             </div>
           ))}
         </div>
-        <button className={styles.button}>CORE SERVICES</button>
+        <button className={styles.button} onClick={nextSection}>CORE SERVICES</button>
       </div>
     </section>
   );
-};
+});
+
 
 export default Page3Section;
