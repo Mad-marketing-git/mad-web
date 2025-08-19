@@ -2,6 +2,7 @@
 import React, { forwardRef } from 'react';
 import styles from './KnowledgeBase.module.css';
 import blogTile from '../assets/BLOG TILE.png';
+import { Fade } from 'react-awesome-reveal';
 
 const KnowledgeBase = forwardRef(({ nextSection }, ref) => {
   const articles = [
@@ -39,22 +40,29 @@ const KnowledgeBase = forwardRef(({ nextSection }, ref) => {
     <div className={styles.page5Container} ref={ref}>
       <div className={styles.content}>
         <div className={styles.knowledgeBase}>
-          <h2>KNOWLEDGE BASE</h2>
-          <p>Welcome to the MAD Marketing Base—your go-to source for expert tips and trends to help Sri Lankan businesses succeed online. From website launches to e-commerce and growth strategies, our articles offer clear, localised guidance tailored to Sri Lanka’s dynamic market.</p>
+          <Fade direction="down" triggerOnce>
+            <h2>KNOWLEDGE BASE</h2>
+            <p>Welcome to the MAD Marketing Base—your go-to source for expert tips and trends to help Sri Lankan businesses succeed online. From website launches to e-commerce and growth strategies, our articles offer clear, localised guidance tailored to Sri Lanka’s dynamic market.</p>
+          </Fade>
           <div className={styles.articles}>
-            <div className={styles.featuredArticle}>
-              <img src={featuredArticle.image} alt="article" className={styles.articleImageTag} />
-              <p>{featuredArticle.text}</p>
-            </div>
+            <Fade direction="left" triggerOnce>
+              <div className={styles.featuredArticle}>
+                <img src={featuredArticle.image} alt="article" className={styles.articleImageTag} />
+                <div className={styles.featuredArticleTextBackground}>
+                  <p>{featuredArticle.text}</p>
+                </div>
+              </div>
+            </Fade>
             <div className={styles.otherArticles}>
               {otherArticles.map((article, index) => (
-                <a key={index} href={article.href} className={styles.articleLink}>{article.text}</a>
+                <Fade direction="right" delay={index * 100} triggerOnce key={index}>
+                  <a key={index} href={article.href} className={styles.articleLink}>{article.text}</a>
+                </Fade>
               ))}
             </div>
           </div>
         </div>
       </div>
-      <button className={styles.button} onClick={nextSection}>CONTACT US</button>
     </div>
   );
 });

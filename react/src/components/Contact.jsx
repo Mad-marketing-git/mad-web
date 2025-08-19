@@ -10,6 +10,7 @@ import yellowBus from '../assets/IMAGE ASSETS BG REMOVED/TB YELLOW BUS.png';
 import wheel from '../assets/3wheel.png';
 import van from '../assets/van.png';
 import spinner from '../assets/IMAGE ASSETS BG REMOVED/TB SPINNER.png';
+import { Fade } from 'react-awesome-reveal';
 
 const Contact = forwardRef((props, ref) => {
   const [formData, setFormData] = useState({
@@ -59,39 +60,41 @@ const Contact = forwardRef((props, ref) => {
       <img src={spinner} alt="spinner" className={`${styles.spinner} ${styles.spinnerLeft}`} />
       <img src={spinner} alt="spinner" className={`${styles.spinner} ${styles.spinnerRight}`} />
       <div className={styles.content}>
-        <div className={styles.talkToUs}>
-          <h2>TALK TO US</h2>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleChange}
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleChange}
-            />
-            <input
-              type="text"
-              name="phone"
-              placeholder="Phone: +94"
-              value={formData.phone}
-              onChange={handleChange}
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              value={formData.message}
-              onChange={handleChange}
-            ></textarea>
-            <button type="submit">FULL SEND!</button>
-          </form>
-        </div>
+        <Fade direction="down" triggerOnce>
+          <div className={styles.talkToUs}>
+            <h2>TALK TO US</h2>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                name="phone"
+                placeholder="Phone: +94"
+                value={formData.phone}
+                onChange={handleChange}
+              />
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                value={formData.message}
+                onChange={handleChange}
+              ></textarea>
+              <button type="submit">FULL SEND!</button>
+            </form>
+          </div>
+        </Fade>
       </div>
       <div className={styles.footerCityscape}>
         <img src={redCar} alt="red car" className={`${styles.car} ${styles.redCar}`} />

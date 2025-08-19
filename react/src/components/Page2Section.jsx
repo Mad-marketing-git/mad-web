@@ -7,6 +7,7 @@ import portfolio3 from '../assets/IMAGE ASSETS BG REMOVED/TB PORTFOLIO NEESH SP.
 import portfolio4 from '../assets/IMAGE ASSETS BG REMOVED/TB PORTFOLIO VXL (2).png';
 import portfolio5 from '../assets/IMAGE ASSETS BG REMOVED/TB PORTFOLIO VXL G.png';
 import portfolio6 from '../assets/IMAGE ASSETS BG REMOVED/TB PORTFOLIO VXL.png';
+import { Fade } from 'react-awesome-reveal';
 
 const Page2Section = forwardRef(({ nextSection }, ref) => {
   const portfolioImages = [portfolio1, portfolio2, portfolio3, portfolio4, portfolio5, portfolio6];
@@ -30,13 +31,19 @@ const Page2Section = forwardRef(({ nextSection }, ref) => {
   return (
     <section id="about" className={styles.page2Section} style={{ backgroundImage: `url(${page2Bg})` }} ref={ref}>
       <div className={styles.content}>
-        <h2>At MAD Marketing, we don’t just develop websites — we engineer powerful digital platforms designed to accelerate your business growth. Our team blends creative vision, strategic insight, and technical mastery to build custom experiences that captivate your audience and convert visitors into loyal customers.</h2>
-        <div className={styles.carousel} ref={carouselRef}>
-          {portfolioImages.map((image, index) => (
-            <img key={index} src={image} alt={`Portfolio ${index + 1}`} className={styles.carouselImage} />
-          ))}
-        </div>
-        <button className={styles.button} onClick={nextSection}>THE MAD LOGIC</button>
+        <Fade direction="up" triggerOnce>
+          <h2>At MAD Marketing, we don’t just develop websites — we engineer powerful digital platforms designed to accelerate your business growth. Our team blends creative vision, strategic insight, and technical mastery to build custom experiences that captivate your audience and convert visitors into loyal customers.</h2>
+        </Fade>
+        <Fade direction="up" delay={200} triggerOnce>
+          <div className={styles.carousel} ref={carouselRef}>
+            {portfolioImages.map((image, index) => (
+              <img key={index} src={image} alt={`Portfolio ${index + 1}`} className={styles.carouselImage} />
+            ))}
+          </div>
+        </Fade>
+        <Fade direction="up" delay={400} triggerOnce>
+          <button className={styles.button} onClick={nextSection}>THE MAD LOGIC</button>
+        </Fade>
       </div>
     </section>
   );

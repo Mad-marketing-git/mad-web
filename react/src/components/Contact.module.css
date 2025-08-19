@@ -45,13 +45,17 @@
     height: 100%;
     color: white;
     padding: 2rem;
+    max-width: 1400px; /* Increased max-width */
   }
   
   .talkToUs {
     background: transparent;
     padding: 2rem;
     border-radius: 10px;
-    width: 45%;
+    width: 150%; /* Corrected to 100% to respect max-width and margin: auto */
+    max-width: 800px; /* Set a maximum width */
+    margin: 0 auto; /* Center the form */
+    transform: translateX(-3cm); /* Changed to move it left by 3cm */
   }
 
   .talkToUs h2 {
@@ -187,6 +191,7 @@
 @media (max-width: 768px) {
   .talkToUs {
     width: 100%;
+    transform: translateX(-1cm);
   }
 
   .talkToUs h2 {
