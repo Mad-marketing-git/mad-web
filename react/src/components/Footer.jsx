@@ -1,14 +1,18 @@
 
 import React from 'react';
 import styles from './Footer.module.css';
-import logo from '../assets/TB LOGO.png';
+import logoPng from '../assets/hero/tb logo.png';
+import logoAvif from '../assets/avif/tb logo.png';
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
         <div className={styles.footerSection}>
-          <img src={logo} alt="MAD Marketing Logo" className={styles.footerLogo} loading="lazy" />
+          <picture>
+            <source srcSet={logoAvif} type="image/avif" />
+            <img src={logoPng} alt="MAD Marketing Logo" className={styles.footerLogo} loading="lazy" />
+          </picture>
           <p className={styles.description}>
             MAD Marketing delivers innovative web solutions that fuel business growth. We specialize in custom design, development, and digital strategy to create fast, reliable, and user-friendly websites tailored to your brand. With seamless mobile optimization and strong backend systems, we ensure your online presence excels on every device.
           </p>

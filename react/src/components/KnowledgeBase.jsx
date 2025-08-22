@@ -1,13 +1,14 @@
 
 import React, { forwardRef } from 'react';
 import styles from './KnowledgeBase.module.css';
-import blogTile from '../assets/BLOG TILE.png';
+import blogTilePng from '../assets/KnowledgeBase/blog tile.png';
+import blogTileAvif from '../assets/avif/blog tile.png';
 import { Fade } from 'react-awesome-reveal';
 
 const KnowledgeBase = forwardRef(({ nextSection }, ref) => {
   const articles = [
     {
-      image: blogTile,
+      image: blogTilePng,
       text: 'Why Your Sri Lankan Business Needs a Mobile-Optimized Website in 2025',
       isLink: false,
     },
@@ -47,7 +48,10 @@ const KnowledgeBase = forwardRef(({ nextSection }, ref) => {
           <div className={styles.articles}>
             <Fade direction="left" triggerOnce>
               <div className={styles.featuredArticle}>
-                <img src={featuredArticle.image} alt="article" className={styles.articleImageTag} loading="lazy" />
+                <picture>
+                  <source srcSet={blogTileAvif} type="image/avif" />
+                  <img src={blogTilePng} alt="article" className={styles.articleImageTag} loading="lazy" />
+                </picture>
                 <div className={styles.featuredArticleTextBackground}>
                   <p>{featuredArticle.text}</p>
                 </div>

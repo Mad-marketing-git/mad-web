@@ -1,15 +1,33 @@
 
 import React, { useState, forwardRef } from 'react';
 import styles from './Contact.module.css';
-import background from '../assets/IMAGE_ASSETS_BG_REMOVED/page-6/page-6-bg.png';
-import redCar from '../assets/IMAGE_ASSETS_BG_REMOVED/tb red car.png';
-import greenCar from '../assets/IMAGE_ASSETS_BG_REMOVED/tb green car.png';
-import pinkCar from '../assets/IMAGE_ASSETS_BG_REMOVED/tb pink car.png';
-import yellowCar from '../assets/IMAGE_ASSETS_BG_REMOVED/tb yellow car.png';
-import yellowBus from '../assets/IMAGE_ASSETS_BG_REMOVED/tb yellow bus.png';
-import wheel from '../assets/3wheel.png';
-import van from '../assets/van.png';
-import spinner from '../assets/IMAGE_ASSETS_BG_REMOVED/tb spinner.png';
+import backgroundPng from '../assets/Contact/page-6-bg.png';
+import backgroundAvif from '../assets/avif/page-6-bg.png';
+import backgroundWebp from '../assets/webp/page-6-bg.webp';
+
+import redCarPng from '../assets/Contact/tb red car.png';
+import redCarAvif from '../assets/avif/tb red car.png';
+
+import greenCarPng from '../assets/Contact/tb green car.png';
+import greenCarAvif from '../assets/avif/tb green car.png';
+
+import pinkCarPng from '../assets/Contact/tb pink car.png';
+import pinkCarAvif from '../assets/avif/tb pink car.png';
+
+import yellowCarPng from '../assets/Contact/tb yellow car.png';
+import yellowCarAvif from '../assets/avif/tb yellow car.png';
+
+import yellowBusPng from '../assets/Contact/tb yellow bus.png';
+import yellowBusAvif from '../assets/avif/tb yellow bus.png';
+
+import wheelPng from '../assets/Contact/3wheel.png';
+import wheelAvif from '../assets/avif/3wheel.png';
+
+import vanPng from '../assets/Contact/van.png';
+import vanAvif from '../assets/avif/van.png';
+
+import spinnerPng from '../assets/Contact/tb spinner.png';
+import spinnerAvif from '../assets/avif/tb spinner.png';
 import { Fade } from 'react-awesome-reveal';
 
 const Contact = forwardRef((props, ref) => {
@@ -41,9 +59,19 @@ const Contact = forwardRef((props, ref) => {
 
   return (
     <div id="contact" className={styles.page6Container} ref={ref}>
-  <img src={background} alt="background" className={styles.backgroundImage} loading="lazy" />
-  <img src={spinner} alt="spinner" className={`${styles.spinner} ${styles.spinnerLeft}`} loading="lazy" />
-  <img src={spinner} alt="spinner" className={`${styles.spinner} ${styles.spinnerRight}`} loading="lazy" />
+  <picture>
+    <source srcSet={backgroundAvif} type="image/avif" />
+    <source srcSet={backgroundWebp} type="image/webp" />
+    <img src={backgroundPng} alt="background" className={styles.backgroundImage} loading="lazy" />
+  </picture>
+  <picture>
+    <source srcSet={spinnerAvif} type="image/avif" />
+    <img src={spinnerPng} alt="spinner" className={`${styles.spinner} ${styles.spinnerLeft}`} loading="lazy" />
+  </picture>
+  <picture>
+    <source srcSet={spinnerAvif} type="image/avif" />
+    <img src={spinnerPng} alt="spinner" className={`${styles.spinner} ${styles.spinnerRight}`} loading="lazy" />
+  </picture>
       <div className={styles.content}>
         <Fade direction="down" triggerOnce>
           <div className={styles.talkToUs}>
@@ -82,13 +110,34 @@ const Contact = forwardRef((props, ref) => {
         </Fade>
       </div>
       <div className={styles.footerCityscape}>
-  <img src={redCar} alt="red car" className={`${styles.car} ${styles.redCar}`} loading="lazy" />
-  <img src={greenCar} alt="green car" className={`${styles.car} ${styles.greenCar}`} loading="lazy" />
-  <img src={pinkCar} alt="pink car" className={`${styles.car} ${styles.pinkCar}`} loading="lazy" />
-  <img src={yellowCar} alt="yellow car" className={`${styles.car} ${styles.yellowCar}`} loading="lazy" />
-  <img src={yellowBus} alt="yellow bus" className={`${styles.bus} ${styles.yellowBus}`} loading="lazy" />
-  <img src={wheel} alt="3 wheel" className={`${styles.wheel} ${styles.threeWheel}`} loading="lazy" />
-  <img src={van} alt="van" className={`${styles.van} ${styles.whiteVan}`} loading="lazy" />
+  <picture>
+    <source srcSet={redCarAvif} type="image/avif" />
+    <img src={redCarPng} alt="red car" className={`${styles.car} ${styles.redCar}`} loading="lazy" />
+  </picture>
+  <picture>
+    <source srcSet={greenCarAvif} type="image/avif" />
+    <img src={greenCarPng} alt="green car" className={`${styles.car} ${styles.greenCar}`} loading="lazy" />
+  </picture>
+  <picture>
+    <source srcSet={pinkCarAvif} type="image/avif" />
+    <img src={pinkCarPng} alt="pink car" className={`${styles.car} ${styles.pinkCar}`} loading="lazy" />
+  </picture>
+  <picture>
+    <source srcSet={yellowCarAvif} type="image/avif" />
+    <img src={yellowCarPng} alt="yellow car" className={`${styles.car} ${styles.yellowCar}`} loading="lazy" />
+  </picture>
+  <picture>
+    <source srcSet={yellowBusAvif} type="image/avif" />
+    <img src={yellowBusPng} alt="yellow bus" className={`${styles.bus} ${styles.yellowBus}`} loading="lazy" />
+  </picture>
+  <picture>
+    <source srcSet={wheelAvif} type="image/avif" />
+    <img src={wheelPng} alt="3 wheel" className={`${styles.wheel} ${styles.threeWheel}`} loading="lazy" />
+  </picture>
+  <picture>
+    <source srcSet={vanAvif} type="image/avif" />
+    <img src={vanPng} alt="van" className={`${styles.van} ${styles.whiteVan}`} loading="lazy" />
+  </picture>
       </div>
     </div>
   );

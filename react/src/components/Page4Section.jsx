@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useRef, forwardRef } from 'react';
 import styles from './Page4Section.module.css';
-import page4Bg from '../assets/page-4-bg.png'; // Keep import for <img> src
+import page4BgPng from '../assets/Page4Section/page-4-bg.png';
+import page4BgAvif from '../assets/avif/page-4-bg.png';
+import page4BgWebp from '../assets/webp/page-4-bg.webp';
 
 // Import videos
-import vidClient from '../assets/phone-screen-video/VID BG CLIENT.mp4';
-import vidMobile from '../assets/phone-screen-video/VID BG MOBILE.mp4';
-import vidStack from '../assets/phone-screen-video/VID BG STACK.mp4';
-import vidTech from '../assets/phone-screen-video/VID BG TECH.mp4';
+import vidClient from '../assets/Page4Section/VID BG CLIENT.mp4';
+import vidMobile from '../assets/Page4Section/VID BG MOBILE.mp4';
+import vidStack from '../assets/Page4Section/VID BG STACK.mp4';
+import vidTech from '../assets/Page4Section/VID BG TECH.mp4';
 
 const Page4Section = forwardRef(({ nextSection }, ref) => {
   const videos = [vidClient, vidMobile, vidStack, vidTech];
@@ -75,7 +77,11 @@ const Page4Section = forwardRef(({ nextSection }, ref) => {
 
   return (
     <section ref={ref} className={styles.page4Section}>
-  <img src={page4Bg} alt="Background" className={styles.backgroundImage} loading="lazy" />
+  <picture>
+    <source srcSet={page4BgAvif} type="image/avif" />
+    <source srcSet={page4BgWebp} type="image/webp" />
+    <img src={page4BgPng} alt="Background" className={styles.backgroundImage} loading="lazy" />
+  </picture>
       <div className={styles.content}>
         <div className={styles.headingContainer}> {/* New wrapper for heading */}
           <h2>WHY PARTNER WITH US?</h2>

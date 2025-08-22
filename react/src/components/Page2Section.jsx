@@ -1,16 +1,36 @@
 import React, { useEffect, useRef, forwardRef } from 'react';
 import styles from './Page2Section.module.css';
-import page2Bg from '../assets/page-2-bg.png';
-import portfolio1 from '../assets/IMAGE_ASSETS_BG_REMOVED/tb portfolio neesh sp (2).png';
-import portfolio2 from '../assets/IMAGE_ASSETS_BG_REMOVED/tb portfolio neesh sp (3).png';
-import portfolio3 from '../assets/IMAGE_ASSETS_BG_REMOVED/tb portfolio neesh sp.png';
-import portfolio4 from '../assets/IMAGE_ASSETS_BG_REMOVED/tb portfolio vxl (2).png';
-import portfolio5 from '../assets/IMAGE_ASSETS_BG_REMOVED/tb portfolio vxl g.png';
-import portfolio6 from '../assets/IMAGE_ASSETS_BG_REMOVED/tb portfolio vxl.png';
+import page2Bg from '../assets/Page2Section/page-2-bg.png';
+import page2BgAvif from '../assets/avif/page-2-bg.png';
+
+import portfolio1Png from '../assets/Page2Section/tb portfolio neesh sp (2).png';
+import portfolio1Avif from '../assets/avif/tb portfolio neesh sp (2).png';
+
+import portfolio2Png from '../assets/Page2Section/tb portfolio neesh sp (3).png';
+import portfolio2Avif from '../assets/avif/tb portfolio neesh sp (3).png';
+
+import portfolio3Png from '../assets/Page2Section/tb portfolio neesh sp.png';
+import portfolio3Avif from '../assets/avif/tb portfolio neesh sp.png';
+
+import portfolio4Png from '../assets/Page2Section/tb portfolio vxl (2).png';
+import portfolio4Avif from '../assets/avif/tb portfolio vxl (2).png';
+
+import portfolio5Png from '../assets/Page2Section/tb portfolio vxl g.png';
+import portfolio5Avif from '../assets/avif/tb portfolio vxl g.png';
+
+import portfolio6Png from '../assets/Page2Section/tb portfolio vxl.png';
+import portfolio6Avif from '../assets/avif/tb portfolio vxl.png';
 import { Fade } from 'react-awesome-reveal';
 
 const Page2Section = forwardRef(({ nextSection }, ref) => {
-  const portfolioImages = [portfolio1, portfolio2, portfolio3, portfolio4, portfolio5, portfolio6];
+  const portfolioImages = [
+    { png: portfolio1Png, avif: portfolio1Avif },
+    { png: portfolio2Png, avif: portfolio2Avif },
+    { png: portfolio3Png, avif: portfolio3Avif },
+    { png: portfolio4Png, avif: portfolio4Avif },
+    { png: portfolio5Png, avif: portfolio5Avif },
+    { png: portfolio6Png, avif: portfolio6Avif },
+  ];
   const carouselRef = useRef(null);
 
   useEffect(() => {
@@ -37,7 +57,10 @@ const Page2Section = forwardRef(({ nextSection }, ref) => {
         <Fade direction="up" delay={200} triggerOnce>
           <div className={styles.carousel} ref={carouselRef}>
             {portfolioImages.map((image, index) => (
-              <img key={index} src={image} alt={`Portfolio ${index + 1}`} className={styles.carouselImage} loading="lazy" />
+              <picture key={index}>
+                <source srcSet={image.avif} type="image/avif" />
+                <img src={image.png} alt={`Portfolio ${index + 1}`} className={styles.carouselImage} loading="lazy" />
+              </picture>
             ))}
           </div>
         </Fade>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, forwardRef } from 'react'; // Added useRef
 import styles from './CoreServices.module.css';
-import backgroundVideo from '../assets/VID SERVICES BG.mp4'; // Import the video
+import backgroundVideo from '../assets/CoreServices/VID SERVICES BG.mp4'; // Import the video
 
 const CoreServices = forwardRef(({ nextSection }, ref) => {
   const services = [

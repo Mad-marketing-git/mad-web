@@ -1,7 +1,10 @@
 import React, { forwardRef } from 'react';
 import styles from './Hero.module.css';
-import heroBg from '../assets/hero-bg.png'; // Import the background image
-import logo from '../assets/TB LOGO.png';
+import heroBg from '../assets/hero/hero-bg.png'; // Import the background image
+import heroBgAvif from '../assets/avif/hero-bg.png';
+
+import logoPng from '../assets/hero/tb logo.png';
+import logoAvif from '../assets/avif/tb logo.png';
 import { Fade } from 'react-awesome-reveal';
 
 const Hero = forwardRef(({ nextSection }, ref) => {
@@ -9,7 +12,10 @@ const Hero = forwardRef(({ nextSection }, ref) => {
     <section id="home" className={styles.hero} style={{ backgroundImage: `url(${heroBg})`, backgroundColor: '#1a2340' }} ref={ref}>
       <div className={styles.heroContent}>
         <Fade direction="down" triggerOnce>
-          <img src={logo} alt="logo" className={styles.logo} loading="lazy" />
+          <picture>
+            <source srcSet={logoAvif} type="image/avif" />
+            <img src={logoPng} alt="logo" className={styles.logo} loading="lazy" />
+          </picture>
         </Fade>
         <Fade direction="down" delay={200} triggerOnce>
           <h1>DIGITAL SOLUTIONS THAT DELIVER</h1>
