@@ -4,7 +4,7 @@
   padding: 100px 20px;
   text-align: center;
   color: white;
-}
+/* removed misplaced bracket */
 
 .content {
   max-width: 1200px;
@@ -24,6 +24,13 @@
   -webkit-overflow-scrolling: touch;
   margin-bottom: 40px;
   margin-top: 2cm;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
 }
 
 .carouselImage {
