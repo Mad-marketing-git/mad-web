@@ -1,12 +1,19 @@
+
 import express from 'express';
 import nodemailer from 'nodemailer';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import compression from 'compression';
+import shrinkRay from 'shrink-ray-current';
 dotenv.config();
+
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Enable GZIP and Brotli compression
+app.use(shrinkRay());
+app.use(compression());
 app.use(cors());
 app.use(express.json());
 

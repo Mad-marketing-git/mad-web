@@ -47,7 +47,7 @@ const KnowledgeBase = forwardRef(({ nextSection }, ref) => {
           <div className={styles.articles}>
             <Fade direction="left" triggerOnce>
               <div className={styles.featuredArticle}>
-                <img src={featuredArticle.image} alt="article" className={styles.articleImageTag} />
+                <img src={featuredArticle.image} alt="article" className={styles.articleImageTag} loading="lazy" />
                 <div className={styles.featuredArticleTextBackground}>
                   <p>{featuredArticle.text}</p>
                 </div>

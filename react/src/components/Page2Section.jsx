@@ -37,7 +37,7 @@ const Page2Section = forwardRef(({ nextSection }, ref) => {
         <Fade direction="up" delay={200} triggerOnce>
           <div className={styles.carousel} ref={carouselRef}>
             {portfolioImages.map((image, index) => (
-              <img key={index} src={image} alt={`Portfolio ${index + 1}`} className={styles.carouselImage} />
+              <img key={index} src={image} alt={`Portfolio ${index + 1}`} className={styles.carouselImage} loading="lazy" />
             ))}
           </div>
         </Fade>

@@ -41,7 +41,7 @@ const WhatWeDo = () => {
       <div className={styles.cardsContainer}>
         {cards.map((card, index) => (
           <div key={index} className={styles.card}>
-            <img src={card.icon} alt={card.title} className={styles.cardIcon} />
+            <img src={card.icon} alt={card.title} className={styles.cardIcon} loading="lazy" />
             <h3>{card.title}</h3>
             <p>{card.description}</p>
           </div>

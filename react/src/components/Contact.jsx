@@ -56,9 +56,9 @@ const Contact = forwardRef((props, ref) => {
 
   return (
     <div id="contact" className={styles.page6Container} ref={ref}>
-      <img src={background} alt="background" className={styles.backgroundImage} />
-      <img src={spinner} alt="spinner" className={`${styles.spinner} ${styles.spinnerLeft}`} />
-      <img src={spinner} alt="spinner" className={`${styles.spinner} ${styles.spinnerRight}`} />
+  <img src={background} alt="background" className={styles.backgroundImage} loading="lazy" />
+  <img src={spinner} alt="spinner" className={`${styles.spinner} ${styles.spinnerLeft}`} loading="lazy" />
+  <img src={spinner} alt="spinner" className={`${styles.spinner} ${styles.spinnerRight}`} loading="lazy" />
       <div className={styles.content}>
         <Fade direction="down" triggerOnce>
           <div className={styles.talkToUs}>
@@ -97,13 +97,13 @@ const Contact = forwardRef((props, ref) => {
         </Fade>
       </div>
       <div className={styles.footerCityscape}>
-        <img src={redCar} alt="red car" className={`${styles.car} ${styles.redCar}`} />
-        <img src={greenCar} alt="green car" className={`${styles.car} ${styles.greenCar}`} />
-        <img src={pinkCar} alt="pink car" className={`${styles.car} ${styles.pinkCar}`} />
-        <img src={yellowCar} alt="yellow car" className={`${styles.car} ${styles.yellowCar}`} />
-        <img src={yellowBus} alt="yellow bus" className={`${styles.bus} ${styles.yellowBus}`} />
-        <img src={wheel} alt="3 wheel" className={`${styles.wheel} ${styles.threeWheel}`} />
-        <img src={van} alt="van" className={`${styles.van} ${styles.whiteVan}`} />
+  <img src={redCar} alt="red car" className={`${styles.car} ${styles.redCar}`} loading="lazy" />
+  <img src={greenCar} alt="green car" className={`${styles.car} ${styles.greenCar}`} loading="lazy" />
+  <img src={pinkCar} alt="pink car" className={`${styles.car} ${styles.pinkCar}`} loading="lazy" />
+  <img src={yellowCar} alt="yellow car" className={`${styles.car} ${styles.yellowCar}`} loading="lazy" />
+  <img src={yellowBus} alt="yellow bus" className={`${styles.bus} ${styles.yellowBus}`} loading="lazy" />
+  <img src={wheel} alt="3 wheel" className={`${styles.wheel} ${styles.threeWheel}`} loading="lazy" />
+  <img src={van} alt="van" className={`${styles.van} ${styles.whiteVan}`} loading="lazy" />
       </div>
     </div>
   );

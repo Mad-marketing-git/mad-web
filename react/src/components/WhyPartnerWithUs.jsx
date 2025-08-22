@@ -9,7 +9,7 @@ const WhyPartnerWithUs = () => {
       <h2>WHY PARTNER WITH US?</h2>
       <div className={styles.contentContainer}>
         <div className={styles.phoneMockup}>
-          <img src={phoneImage} alt="Phone Mockup" className={styles.phoneImage} />
+          <img src={phoneImage} alt="Phone Mockup" className={styles.phoneImage} loading="lazy" />
           <div className={styles.overlayText}>
             <h3>Cutting-Edge Technology</h3>
             <p>Utilizing the latest tools and frameworks to build websites that are fast, secure, and scalable.</p>

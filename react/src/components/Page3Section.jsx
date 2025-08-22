@@ -53,7 +53,7 @@ const Page3Section = forwardRef(({ nextSection }, ref) => {
                   <p className={styles.cardDescription}>{card.description}</p>
                 ) : (
                   <>
-                    <img src={card.icon} alt={card.title} className={styles.cardIcon} />
+                    <img src={card.icon} alt={card.title} className={styles.cardIcon} loading="lazy" />
                     <h3>{card.title}</h3>
                   </>
                 )}
