@@ -1,15 +1,15 @@
 
 import React, { useState, forwardRef } from 'react';
 import styles from './Contact.module.css';
-import background from '../assets/IMAGE ASSETS BG REMOVED/page-6/page-6-bg.png';
-import redCar from '../assets/IMAGE ASSETS BG REMOVED/TB RED CAR.png';
-import greenCar from '../assets/IMAGE ASSETS BG REMOVED/TB GREEN CAR.png';
-import pinkCar from '../assets/IMAGE ASSETS BG REMOVED/TB PINK CAR.png';
-import yellowCar from '../assets/IMAGE ASSETS BG REMOVED/TB YELLOW CAR.png';
-import yellowBus from '../assets/IMAGE ASSETS BG REMOVED/TB YELLOW BUS.png';
+import background from '../assets/IMAGE_ASSETS_BG_REMOVED/page-6/page-6-bg.png';
+import redCar from '../assets/IMAGE_ASSETS_BG_REMOVED/tb red car.png';
+import greenCar from '../assets/IMAGE_ASSETS_BG_REMOVED/tb green car.png';
+import pinkCar from '../assets/IMAGE_ASSETS_BG_REMOVED/tb pink car.png';
+import yellowCar from '../assets/IMAGE_ASSETS_BG_REMOVED/tb yellow car.png';
+import yellowBus from '../assets/IMAGE_ASSETS_BG_REMOVED/tb yellow bus.png';
 import wheel from '../assets/3wheel.png';
 import van from '../assets/van.png';
-import spinner from '../assets/IMAGE ASSETS BG REMOVED/TB SPINNER.png';
+import spinner from '../assets/IMAGE_ASSETS_BG_REMOVED/tb spinner.png';
 import { Fade } from 'react-awesome-reveal';
 
 const Contact = forwardRef((props, ref) => {

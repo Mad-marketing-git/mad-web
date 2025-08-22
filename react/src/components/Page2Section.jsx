@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, forwardRef } from 'react';
 import styles from './Page2Section.module.css';
 import page2Bg from '../assets/page-2-bg.png';
-import portfolio1 from '../assets/IMAGE ASSETS BG REMOVED/TB PORTFOLIO NEESH SP (2).png';
-import portfolio2 from '../assets/IMAGE ASSETS BG REMOVED/TB PORTFOLIO NEESH SP (3).png';
-import portfolio3 from '../assets/IMAGE ASSETS BG REMOVED/TB PORTFOLIO NEESH SP.png';
-import portfolio4 from '../assets/IMAGE ASSETS BG REMOVED/TB PORTFOLIO VXL (2).png';
-import portfolio5 from '../assets/IMAGE ASSETS BG REMOVED/TB PORTFOLIO VXL G.png';
-import portfolio6 from '../assets/IMAGE ASSETS BG REMOVED/TB PORTFOLIO VXL.png';
+import portfolio1 from '../assets/IMAGE_ASSETS_BG_REMOVED/tb portfolio neesh sp (2).png';
+import portfolio2 from '../assets/IMAGE_ASSETS_BG_REMOVED/tb portfolio neesh sp (3).png';
+import portfolio3 from '../assets/IMAGE_ASSETS_BG_REMOVED/tb portfolio neesh sp.png';
+import portfolio4 from '../assets/IMAGE_ASSETS_BG_REMOVED/tb portfolio vxl (2).png';
+import portfolio5 from '../assets/IMAGE_ASSETS_BG_REMOVED/tb portfolio vxl g.png';
+import portfolio6 from '../assets/IMAGE_ASSETS_BG_REMOVED/tb portfolio vxl.png';
 import { Fade } from 'react-awesome-reveal';
 
 const Page2Section = forwardRef(({ nextSection }, ref) => {

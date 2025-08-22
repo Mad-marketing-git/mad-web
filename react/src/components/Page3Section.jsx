@@ -1,10 +1,10 @@
 import React, { useState, forwardRef } from 'react';
 import styles from './Page3Section.module.css';
 import page3Bg from '../assets/page-3-bg.png';
-import bulbIcon from '../assets/IMAGE ASSETS BG REMOVED/cards/TB BULB ICON.png';
-import deviceIcon from '../assets/IMAGE ASSETS BG REMOVED/cards/TB DEVICE ICON.png';
-import scaleIcon from '../assets/IMAGE ASSETS BG REMOVED/cards/TB SCALE ICON.png';
-import commsIcon from '../assets/IMAGE ASSETS BG REMOVED/cards/TB COMMS ICON.png';
+import bulbIcon from '../assets/IMAGE_ASSETS_BG_REMOVED/cards/tb bulb icon.png';
+import deviceIcon from '../assets/IMAGE_ASSETS_BG_REMOVED/cards/tb device icon.png';
+import scaleIcon from '../assets/IMAGE_ASSETS_BG_REMOVED/cards/tb scale icon.png';
+import commsIcon from '../assets/IMAGE_ASSETS_BG_REMOVED/cards/tb comms icon.png';
 import { Fade } from 'react-awesome-reveal';
 
 const Page3Section = forwardRef(({ nextSection }, ref) => {
