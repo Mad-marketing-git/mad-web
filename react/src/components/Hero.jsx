@@ -9,7 +9,7 @@ const Hero = forwardRef(({ nextSection }, ref) => {
     <section id="home" className={styles.hero} style={{ backgroundImage: `url(${heroBg})`, backgroundColor: '#1a2340' }} ref={ref}>
       <div className={styles.heroContent}>
         <Fade direction="down" triggerOnce>
-          <img src={logo} alt="logo" className={styles.logo} />
+          <img src={logo} alt="logo" className={styles.logo} loading="lazy" />
         </Fade>
         <Fade direction="down" delay={200} triggerOnce>
           <h1>DIGITAL SOLUTIONS THAT DELIVER</h1>

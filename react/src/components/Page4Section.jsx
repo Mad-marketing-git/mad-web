@@ -75,7 +75,7 @@ const Page4Section = forwardRef(({ nextSection }, ref) => {
 
   return (
     <section ref={ref} className={styles.page4Section}>
-      <img src={page4Bg} alt="Background" className={styles.backgroundImage} />
+  <img src={page4Bg} alt="Background" className={styles.backgroundImage} loading="lazy" />
       <div className={styles.content}>
         <div className={styles.headingContainer}> {/* New wrapper for heading */}
           <h2>WHY PARTNER WITH US?</h2>
