@@ -25,33 +25,18 @@ const Contact = forwardRef((props, ref) => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const { name, email, message } = formData;
+    const { name, email, phone, message } = formData;
     if (!name || !email || !message) {
       alert('Please fill out all required fields.');
       return;
     }
-
-    try {
-      const response = await fetch('http://localhost:5000/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        alert('Email sent successfully!');
-        setFormData({ name: '', email: '', phone: '', message: '' });
-      } else {
-        alert('Failed to send email.');
-      }
-    } catch (error) {
-      console.error('Error sending email:', error);
-      alert('An error occurred while sending the email.');
-    }
+    // WhatsApp number in international format, e.g., '94771234567' for +94 77 123 4567
+    const whatsappNumber = '0766343111';
+    const text = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+    const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+    window.open(url, '_blank');
   };
 
   return (
