@@ -26,6 +26,14 @@ const Hero = forwardRef(({ nextSection }, ref) => {
       {/* Placeholder for abstract graphics */}
       <div className={styles.graphic1}></div>
       <div className={styles.graphic2}></div>
+
+      {/* Falling Stars */}
+      <div className={styles.fallingStar} style={{ top: '20%', right: '0%', animationDelay: '0s' }}></div>
+      <div className={styles.fallingStar} style={{ top: '10%', right: '-20%', animationDelay: '2s' }}></div>
+      <div className={styles.fallingStar} style={{ top: '30%', right: '-40%', animationDelay: '4s' }}></div>
+      <div className={styles.fallingStar} style={{ top: '5%', right: '-60%', animationDelay: '6s' }}></div>
+      <div className={styles.fallingStar} style={{ top: '25%', right: '-80%', animationDelay: '8s' }}></div>
+      <div className={styles.fallingStar} style={{ top: '15%', right: '-100%', animationDelay: '10s' }}></div>
     </section>
   );
 });
